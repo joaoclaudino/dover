@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface
 {
-    internal interface ITempAssemblyLoader
+    public interface ITempAssemblyLoader
     {
         List<Model.AssemblyInformation> GetAssemblyInfoFromBin(byte[] asmBytes, Model.AssemblyInformation asmInfo);
     }

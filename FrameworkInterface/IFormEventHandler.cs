@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface
 {
-    internal interface IFormEventHandler
+    public interface IFormEventHandler
     {
         void UnRegisterForms();
 

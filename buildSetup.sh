@@ -31,52 +31,44 @@ mkdir -p $dll_dir
 mkdir -p $setup_dir
 
 cp -a Core/bin/x64/Release/*.exe $exe_dir
+echo "JBC-1"
+
 cp -a Core/bin/x64/Release/*.dll $dll_dir
+echo "JBC-2"
+
 cp -a Core/bin/x64/Release/pt-BR $dll_dir
-cp -a Core/bin/x64/Release/Output/setup.exe $setup_dir
+echo "JBC-3"
+
+mkdir -p Core/bin/x64/Release/Output
+
+
+echo $setup_dir
+cp -a Core/bin/x64/Release/Output/mysetup.exe $setup_dir
+echo "JBC-4"
+
 
 rm -rf temp
+echo "JBC-5"
 mkdir temp
+echo "JBC-6"
 cp Install/Doverx64.xml temp
-cp $setup_dir/setup.exe temp
+echo "JBC-7"
+cp $setup_dir/mysetup.exe temp
+echo "JBC-8"
 cp $exe_dir/Dover.exe temp
+echo "JBC-9"
+
+
+
+echo $tag
+echo "JBC-9"
 
 cd temp
-AddOnRegDataGen Doverx64.xml $tag setup.exe setup.exe Dover.exe
+AddOnRegDataGen Doverx64.xml $tag mysetup.exe myssetup.exe Dover.exe
 cd ..
 
-mv temp/Dover.ard $setup_dir
+echo $setup_dir
 
-# 32 bits stuff
-MSBuild.exe Dover.sln //p:Configuration=Release //p:Platform=x86
-
-cp Install/Dover.iss Core/bin/Release
-pushd .
-cd Core/bin/Release
-iscc Dover.iss
-popd
-
-export setup_dir=build/x86/setup
-export exe_dir=build/x86/exe
-export dll_dir=build/x86/dll
-
-mkdir -p $exe_dir
-mkdir -p $setup_dir
-mkdir -p $dll_dir
-
-cp -a Core/bin/Release/*.exe $exe_dir
-cp -a Core/bin/Release/*.dll $dll_dir
-cp -a Core/bin/Release/pt-BR $dll_dir
-cp -a Core/bin/Release/Output/setup.exe $setup_dir
-
-rm -rf temp
-mkdir temp
-cp Install/Dover.xml temp
-cp $setup_dir/setup.exe temp
-cp $exe_dir/Dover.exe temp
-
-cd temp
-AddOnRegDataGen Dover.xml $tag setup.exe setup.exe Dover.exe
-cd ..
-
-mv temp/Dover.ard $setup_dir
+mv temp/Doverx64.xml $setup_dir
+<<COMMENT1
+COMMENT1

@@ -1,1 +1,1 @@
-﻿UPDATE "@DOVER_MODULES" SET "U_DueDate" = '{1}' WHERE "U_Namespace" = '{0}' and U_Type = 'A'
+﻿UPDATE "@DOVER_MODULES" SET "U_DueDate" = '{1}' WHERE "U_Namespace" = '{0}' and "U_Type" = 'A'

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface
 {
-    internal interface IConfigAddin
+    public interface IConfigAddin
     {
         void ConfigureAddin(string addinName);
     }

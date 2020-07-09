@@ -6,7 +6,7 @@ using Dover.Framework.Service;
 
 namespace Dover.Framework.Service
 {
-    internal enum AddinStatus
+    public enum AddinStatus
     {
         Running,
         Stopped
@@ -15,7 +15,7 @@ namespace Dover.Framework.Service
 
 namespace Dover.Framework.Interface
 {
-    internal interface IAddinManager
+    public interface IAddinManager
     {
         void LogError(string p);
 

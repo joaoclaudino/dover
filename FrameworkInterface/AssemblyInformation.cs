@@ -40,10 +40,10 @@ namespace Dover.Framework.Model
 
         public string Description { get; set; }
 
-        internal int Major { get; set; }
-        internal int Minor { get; set; }
-        internal int Build { get; set; }
-        internal int Revision { get; set; }
+        public int Major { get; set; }
+        public int Minor { get; set; }
+        public int Build { get; set; }
+        public int Revision { get; set; }
 
         public string Version
         {
@@ -98,7 +98,7 @@ namespace Dover.Framework.Model
 
         public AssemblyType Type { get; set; }
 
-        internal static string ConvertTypeToCode(AssemblyType type)
+        public static string ConvertTypeToCode(AssemblyType type)
         {
             switch (type)
             {
@@ -113,7 +113,7 @@ namespace Dover.Framework.Model
             }
         }
 
-        internal string TypeCode
+        public string TypeCode
         {
             get 
             {
@@ -138,7 +138,7 @@ namespace Dover.Framework.Model
 
         public string FileName { get; set; }
 
-        internal List<AssemblyInformation> Dependencies { get; set; }
+        public List<AssemblyInformation> Dependencies { get; set; }
 
         public override string ToString()
         {

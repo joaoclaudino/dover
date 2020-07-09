@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface
 {
-    internal interface IEventDispatcher
+    public interface IEventDispatcher
     {
         void UnregisterEvents();
 

@@ -6,7 +6,7 @@ using SAPbouiCOM;
 
 namespace Dover.Framework.Interface
 {
-    internal interface IAppEventHandler
+    public interface IAppEventHandler
     {
         void ShutDown();
 

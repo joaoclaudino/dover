@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface 
 {
-    internal interface IApplication
+    public interface IApplication
     {
         T Resolve<T>();
 

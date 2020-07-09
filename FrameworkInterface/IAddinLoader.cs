@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dover.Framework.Interface
 {
-    internal interface IAddinLoader
+    public interface IAddinLoader
     {
         void StartMenu();
 
